@@ -16,6 +16,6 @@ When(/^I click on Academics and add classroom timetable$/, function () {
 });
 
 Then(/^Timetable is get added to school$/, function () {
-    cy.get('#route > div.box-body').contains(edata.title).should("be.visible")
+    cy.get('.tab-content').contains(edata.title).should("be.visible")
     cy.screenshot()
 });

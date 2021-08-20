@@ -6,12 +6,12 @@ const sectionid = "#section_id"
 const subject = "#subject_group_id"
 const searchbutton = "body > div.wrapper > div.content-wrapper > section.content > div > div > div > form > div.box-footer > button"
 const addrow = "#add_row"
-const sub = "#subject_id"
+const sub = "#subject_id_5"
 const teacher = "#staff_id_5"
 const timefrom = "#time_from_5"
 const timeto = "#time_to_5"
 const roomno = "#room_no_5"
-const savebutton = ".btn btn-primary btn-sm pull-right"
+const savebutton = "#form_Monday > .btn-primary"
 const adata = require("../../../fixtures/academics.json")
 export class timetable {
 
@@ -27,6 +27,9 @@ export class timetable {
         cy.get(sectionid).select(adata.section)
         cy.get(subject).select(adata.subject)
         cy.get(searchbutton).click()
+        if (cy.get('.tab-content').contains(adata.sub)) {
+            cy.contains('tbody', adata.sub).find('input').eq(4).click()
+        }
         cy.get(addrow).click()
         cy.get(':nth-child(9) > :nth-child(1) > .select2 > .selection > .select2-selection > .select2-selection__arrow > b').click()
         cy.get(sub).select(adata.sub, { force: true })
