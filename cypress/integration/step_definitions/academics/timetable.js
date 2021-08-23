@@ -19,3 +19,4 @@ Then(/^Timetable is get added to school$/, function () {
     cy.get('.tab-content').contains(edata.title).should("be.visible")
     cy.screenshot()
 });
+

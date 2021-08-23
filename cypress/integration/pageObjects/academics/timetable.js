@@ -40,4 +40,5 @@ export class timetable {
         cy.get(roomno).type(adata.roomno)
         cy.get(savebutton).click()
     }
+    
 }
