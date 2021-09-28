@@ -11,6 +11,9 @@ Given(/^I login into system$/, function () {
     tt.academcistab()
 });
 
+
+
+
 When(/^I click on Academics and add classroom timetable$/, function () {
     tt.addtimetable()
 });

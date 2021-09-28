@@ -56,6 +56,9 @@ export class income {
         }
     }
 
+
+
+    
     incomehead() {
         cy.get(headtab).click()
         cy.get(headname).type(idata.head1)

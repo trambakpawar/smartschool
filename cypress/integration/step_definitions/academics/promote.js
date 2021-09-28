@@ -15,6 +15,9 @@ When(/^I click on promote students and fill the data$/, function () {
     st.promotestudent()
 });
 
+
+
+
 Then(/^Students get promoted to next class$/, function () {
     cy.get('.box > .box-body').contains(adata.teacher).should("be.visible")
     cy.screenshot()

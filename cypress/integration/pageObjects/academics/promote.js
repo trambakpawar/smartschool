@@ -17,6 +17,9 @@ export class student {
 
 
 
+
+    
+
     promotestudent() {
         cy.get(promotetab).click()
         cy.get(selectclass).select(adata.class)

@@ -15,8 +15,15 @@ When(/^I click on Academics and assign class teacher$/, function () {
     ct.assignclass()
 });
 
+
+
+
 Then(/^Teacher get added to class$/, function () {
     cy.get('.box > .box-body').contains(adata.teacher).should("be.visible")
     cy.screenshot()
 });
+
+
+
+
 

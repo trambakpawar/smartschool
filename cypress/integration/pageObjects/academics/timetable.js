@@ -15,6 +15,8 @@ const savebutton = "#form_Monday > .btn-primary"
 const adata = require("../../../fixtures/academics.json")
 export class timetable {
 
+
+    
     academcistab() {
         cy.get(academcistab).click()
     }
@@ -40,5 +42,5 @@ export class timetable {
         cy.get(roomno).type(adata.roomno)
         cy.get(savebutton).click()
     }
-    
+
 }
